@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
     module: {
@@ -38,7 +39,12 @@ module.exports = {
         ]
     },
     entry: {
-        'piaofang': './src/entry/index'
+        piaofang: './src/entry/index',
+        vendor: [
+            'classnames',
+            'react',
+            'react-dom'
+        ]
     },
     output: {
         path: path.resolve(__dirname, './dist'),
@@ -59,5 +65,11 @@ module.exports = {
         extensions: ['.js', '.jsx', '.css', 'scss'],
         alias: {}
     },
-    plugins: []
+    plugins: [
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'vendor',
+            filename: '[name].js'
+        }),
+        new webpack.optimize.ModuleConcatenationPlugin()
+    ]
 }
