@@ -1,0 +1,9 @@
+**/*.css
+**/*.scss
+**/*.png
+**/*.svg
+**/*.md
+**/*.html
+**/*.json
+
+dist
