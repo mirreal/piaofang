@@ -9,7 +9,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Header from '../components/Header/'
+import Header from '../components/Main/'
 
 import '../common/css/base.css'
 

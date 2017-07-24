@@ -1,0 +1,90 @@
+.dateBar {
+    color: #666;
+    background-color: #f4f4f4;
+    padding-top: .12rem;
+    padding-bottom: .12rem;
+    line-height: .6rem;
+    font-size: .28rem;
+    position: relative
+}
+
+.dateBar::after {
+    content: ' ';
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    -webkit-transform: scale(1,.5);
+    transform: scale(1,.5);
+    -webkit-transform-origin: bottom;
+    transform-origin: bottom;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 10
+}
+
+.dateBar li .more:after,.red-dot:before {
+    content: ''
+}
+
+.dateBar li {
+    width: .02rem;
+    text-align: center;
+    border: none;
+    border-radius: .08rem
+}
+
+.dateBar li:nth-child(1) {
+    margin-left: .24rem
+}
+
+.dateBar li:nth-last-child(1) {
+    margin-right: .24rem
+}
+
+.dateBar li.active {
+    background: #ef4238;
+    color: #fff;
+    border-color: #fff
+}
+
+.dateBar li.numDate {
+    min-width: 3rem
+}
+
+.dateBar li .more {
+    position: relative;
+    width: .24rem;
+    height: .24rem
+}
+
+.dateBar li .more:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: .6em;
+    height: .6em;
+    border-left: .02rem solid #999;
+    border-bottom: .02rem solid #999;
+    -webkit-transform: translateY(-80%) scaleX(.8) rotateZ(-45deg);
+    transform: translateY(-80%) scaleX(.8) rotateZ(-45deg)
+}
+
+.dateBar li.active .more:after {
+    border-left: .02rem solid #fff;
+    border-bottom: .02rem solid #fff
+}
+
+.dateBar li.hover {
+    background: #fbe9e9
+}
+
+.hbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+}
+.flex1 {
+    -ms-flex: 1;
+    flex: 1
+}

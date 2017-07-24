@@ -1,0 +1,36 @@
+.menu-list {
+    display: flex;
+    position: relative;
+
+    a {
+        font-weight: 900;
+        display: block;
+        padding: 0 0.24rem;
+        height: 0.88rem;
+        line-height: 0.88rem;
+        text-align: center;
+        color: #666;
+        font-size: 0.28rem;
+        flex: 1;
+
+        &.active {
+            color: #f34d41;
+            position: relative;
+        }
+
+        &.active::after {
+            content: ' ';
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            width: 100%;
+            height: 4px;
+            background-color: #f34d41;
+            -webkit-transform: scale(1,.5);
+            transform: scale(1,.5);
+            -webkit-transform-origin: bottom;
+            transform-origin: bottom;
+            position: absolute;
+        }
+    }
+}

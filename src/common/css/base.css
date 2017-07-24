@@ -82,3 +82,17 @@ a {
     color: rgba(0, 0, 0, .87);
     text-decoration: none;
 }
+
+html {
+    background: #fff;
+    font-size: 50px;
+    font-family: "Microsoft YaHei","Helvetica Neue",HelveticaNeue,Helvetica-Neue,Helvetica,"BBAlpha Sans",sans-serif;
+    user-select: none;
+    text-size-adjust: "100%"
+}
+
+body {
+    font-size: .24em;
+    min-width: 3.2rem;
+    -webkit-overflow-scrolling: touch
+}
