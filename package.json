@@ -21,7 +21,9 @@
   },
   "homepage": "https://github.com/mirreal/piaofang#readme",
   "dependencies": {
+    "axios": "^0.16.2",
     "classnames": "^2.2.5",
+    "es6-promise": "^4.1.1",
     "iscroll": "^5.2.0",
     "koa": "^2.3.0",
     "koa-request": "^1.0.0",
@@ -36,6 +38,7 @@
     "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.4",
     "eslint": "^4.3.0",
     "eslint-loader": "^1.9.0",
