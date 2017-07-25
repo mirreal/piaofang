@@ -41,6 +41,8 @@ module.exports = {
     entry: {
         piaofang: './src/entry/index',
         vendor: [
+            'axios',
+            'es6-promise',
             'classnames',
             'react',
             'react-dom'
