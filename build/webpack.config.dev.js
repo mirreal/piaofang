@@ -1,7 +1,5 @@
 /**
  * @fileOverview webapck develop config
- *
- * Created by yran on 2018/01/10.
  */
 const path = require('path')
 const webpack = require('webpack')

@@ -1,7 +1,5 @@
 /**
  * @fileOverview webapck base config
- *
- * Created by yran on 2018/01/10.
  */
 const path = require('path')
 
@@ -70,7 +68,10 @@ module.exports = {
         }
     ],
     resolve: {
-        modules: ['node_modules', path.resolve('./src')],
+        modules: [
+            'node_modules',
+            path.resolve('./src')
+        ],
         enforceExtension: false,
         extensions: ['.js', '.jsx', '.css', '.scss'],
         alias: {}

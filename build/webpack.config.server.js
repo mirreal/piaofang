@@ -1,3 +1,6 @@
+/**
+ * @fileOverview webapck dev server config
+ */
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const devConfig = require('./webpack.config.dev.js')
