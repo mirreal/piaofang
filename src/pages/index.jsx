@@ -13,7 +13,25 @@ import Header from '../components/Main/'
 
 import '../common/css/base.css'
 
+const ROOT_ID = 'main-page'
+
+function createRootContainer() {
+    const $root = document.createElement('div')
+    $root.setAttribute('id', ROOT_ID)
+    document.body.appendChild($root)
+
+    return $root
+}
+
+function getRootContainer() {
+    const $root = document.getElementById(ROOT_ID)
+
+    return $root || createRootContainer()
+}
+
+const $main = getRootContainer()
+
 ReactDOM.render(
     <Header />,
-    document.getElementById('main-page')
+    $main
 )

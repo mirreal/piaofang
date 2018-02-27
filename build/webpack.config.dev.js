@@ -56,8 +56,13 @@ module.exports = merge(baseConfig, {
         path: path.resolve('dist')
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin([
+            'dist'
+        ], {
+            root: path.resolve()
+        }),
         new HtmlWebpackPlugin({
+            // template: 'src/demo/index.html',
             title: 'piaofang'
         }),
         new ManifestPlugin(),

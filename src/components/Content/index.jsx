@@ -11,7 +11,9 @@ export default class Content extends Component {
     fetchData() {
         axios.get('//127.0.0.1:3000')
             .then(res => {
+                /* eslint-disable no-console */
                 console.log(res.data)
+                /* eslint-enable no-console */
             })
     }
     render() {

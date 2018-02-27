@@ -4,12 +4,12 @@
 const path = require('path')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-// const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const baseConfig = require('./webpack.config.base')
-const config = require('./config')
 const cssLoader = require('./css-loader')
 
 module.exports = merge(baseConfig, {
@@ -45,12 +45,17 @@ module.exports = merge(baseConfig, {
         ]
     },
     output: {
-        path: path.resolve(config.RELEASE_DIR, 'controllers2')
+        path: path.resolve('dist')
     },
     plugins: [
-        // new CleanWebpackPlugin(['dist'], {
-        //     exclude: ['.ares'],
-        // }),
+        new CleanWebpackPlugin([
+            'dist'
+        ], {
+            root: path.resolve()
+        }),
+        new HtmlWebpackPlugin({
+            title: 'piaofang'
+        }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
                 warnings: true
