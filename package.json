@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .jsx,.js src build",
     "dev-server": "node build/dev-server.js",
-    "start": "webpack-dev-server --open --config build/webpack.config.server.js",
+    "start": "nodemon server/index.js & webpack-dev-server --open --config build/webpack.config.server.js",
     "dev": "webpack --config  build/webpack.config.dev.js --progress -w",
     "build": "webpack --config build/webpack.config.prod.js --progress"
   },
@@ -31,6 +31,7 @@
     "iscroll": "^5.2.0",
     "koa": "^2.3.0",
     "koa-request": "^1.0.0",
+    "nodemon": "^1.15.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "request": "^2.81.0"

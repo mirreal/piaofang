@@ -6,7 +6,7 @@ import TicketList from './TicketList/'
 
 export default class Content extends Component {
     componentWillMount() {
-        this.fetchData()
+        // this.fetchData()
     }
     fetchData() {
         axios.get('//127.0.0.1:3000')
